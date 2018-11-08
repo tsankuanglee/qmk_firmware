@@ -19,7 +19,7 @@ enum custom_keycodes {
   HSV_0_255_255
 };
 
-// https://configure.ergodox-ez.com/layouts/amWo
+// https://configure.ergodox-ez.com/layouts/oBGr
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // this keymap is kept here so we know the order of the keys in the array.
@@ -314,10 +314,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     	____, ____, ____,
     
     // right hand
-    ____, ____, ____, ____, ____, KC_MS_ACCEL0, ____,
-    ____, KC_MS_WH_UP, KC_MS_BTN4, KC_MS_BTN3, KC_MS_BTN5, KC_MS_ACCEL1, ____,
-    KC_MS_WH_DOWN, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, KC_MS_ACCEL2, ____,
-    ____, KC_MS_WH_LEFT, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_RIGHT, ____,
+    ____, ____, KC_MS_BTN4, KC_MS_BTN3, KC_MS_BTN5, KC_MS_ACCEL0, ____,
+    ____, KC_MS_WH_UP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, KC_MS_ACCEL1, ____,
+    KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_ACCEL2, ____,
+    ____, KC_MS_WH_LEFT, ____, ____, ____, KC_MS_WH_RIGHT, ____,
      ____, ____, ____, ____, ____,
     
     // right thumb

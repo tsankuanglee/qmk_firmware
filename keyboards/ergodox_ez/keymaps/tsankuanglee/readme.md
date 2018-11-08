@@ -8,6 +8,10 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 ## Changelog
 
+* 2018-11-08-b
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/oBGr)
+  * Make mouse layer movement same position as arrow movement
+
 * 2018-11-08
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/amWo)
   * Small tweaking on symbols around the number pad.
