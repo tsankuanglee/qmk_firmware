@@ -3,17 +3,6 @@
 #include "action_layer.h"
 #include "version.h"
 
-#define LAYER_BASE 0 // default layer
-#define LAYER_MEDIA 1 // 
-#define LAYER_FN 2
-#define LAYER_MOVEMENT 3
-#define LAYER_FN_SYM 4
-#define LAYER_HARDWARE 5
-#define LAYER_NUMBERS 6
-#define LAYER_7 7
-#define LAYER_8 8
-#define LAYER_9 9
-#define LAYER_10 10 
 
 /* Aliases */
 #define ____ KC_TRNS
@@ -30,7 +19,7 @@ enum custom_keycodes {
   HSV_0_255_255
 };
 
-// https://configure.ergodox-ez.com/layouts/XlaM
+// https://configure.ergodox-ez.com/layouts/amWo
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // this keymap is kept here so we know the order of the keys in the array.
@@ -79,28 +68,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ),
 [0] = LAYOUT_ergodox(
     // left hand
-    KC_ESCAPE, KC_1, KC_2, KC_3, KC_4, KC_5, ____,
+    KC_ESCAPE, KC_1, KC_2, KC_3, KC_4, KC_5, KC_LEAD,
     KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, ALL_T(KC_NO),
     CTL_T(KC_ESCAPE), KC_A, KC_S, KC_D, KC_F, KC_G,
     KC_LSHIFT, KC_Z, KC_X, KC_C, KC_V, KC_B, SH_MON,
-     LT(7,KC_NO), LT(8,KC_NO), KC_LCTRL, KC_LGUI, KC_LALT,
+     LT(6,KC_NO), LT(7,KC_NO), KC_LCTRL, KC_LGUI, KC_LALT,
         
     // left thumb
-    	LT(7,KC_GRAVE), MEH_T(KC_NO),
+    	LT(6,KC_GRAVE), MEH_T(KC_NO),
     		LT(10,KC_DELETE),
-    	KC_SPACE, LT(9,KC_ENTER), LT(8,KC_BSPACE),
+    	KC_SPACE, LT(8,KC_ENTER), LT(7,KC_BSPACE),
     
     // right hand
-    ____, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPACE,
+    KC_LEAD, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPACE,
     ALL_T(KC_NO), KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLASH,
     KC_H, KC_J, KC_K, KC_L, KC_SCOLON, KC_QUOTE,
     SH_MON, KC_N, KC_M, KC_COMMA, KC_DOT, KC_SLASH, KC_RSHIFT,
-     ALGR_T(KC_MINUS), RGUI_T(KC_EQUAL), RCTL_T(KC_LBRACKET), LT(10,KC_RBRACKET), LT(7,KC_APPLICATION),
+     ALGR_T(KC_MINUS), RGUI_T(KC_EQUAL), RCTL_T(KC_LBRACKET), LT(10,KC_RBRACKET), LT(6,KC_APPLICATION),
     
     // right thumb
     KC_LEFT, KC_RIGHT,
     KC_UP,
-    KC_DOWN, LT(8,KC_SPACE), LT(9,KC_ENTER)
+    KC_DOWN, LT(7,KC_SPACE), LT(8,KC_ENTER)
 ),
 
 [1] = LAYOUT_ergodox(
@@ -235,32 +224,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [6] = LAYOUT_ergodox(
     // left hand
-    ____, ____, ____, ____, ____, ____, ____,
-    ____, ____, ____, ____, ____, ____, ____,
-    ____, ____, ____, ____, ____, ____,
-    ____, ____, ____, ____, ____, ____, ____,
-     ____, ____, ____, ____, ____,
-        
-    // left thumb
-    	____, ____,
-    		____,
-    	____, ____, ____,
-    
-    // right hand
-    ____, ____, ____, ____, ____, ____, ____,
-    ____, ____, ____, ____, ____, ____, ____,
-    ____, ____, ____, ____, ____, ____,
-    ____, ____, ____, ____, ____, ____, ____,
-     ____, ____, ____, ____, ____,
-    
-    // right thumb
-    ____, ____,
-    ____,
-    ____, ____, ____
-),
-
-[7] = LAYOUT_ergodox(
-    // left hand
     ____, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, ____,
     ____, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, ____,
     ____, KC_F11, KC_F12, KC_F13, KC_F14, KC_F15,
@@ -285,7 +248,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ____, ____, ____
 ),
 
-[8] = LAYOUT_ergodox(
+[7] = LAYOUT_ergodox(
     // left hand
     KC_CAPSLOCK, KC_CALCULATOR, KC_WWW_SEARCH, KC_MAIL, KC_PSCREEN, KC_MY_COMPUTER, ____,
     KC_F20, KC_AUDIO_MUTE, KC_WWW_HOME, KC_MEDIA_EJECT, KC_WWW_REFRESH, KC_AUDIO_VOL_UP, ____,
@@ -299,11 +262,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     	____, ____, ____,
     
     // right hand
-    ____, KC_CALCULATOR, KC_CIRC, KC_LPRN, KC_RPRN, KC_KP_PLUS, KC_EQUAL,
-    ____, KC_NUMLOCK, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_MINUS, KC_PAUSE,
-    KC_SCROLLLOCK, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_ASTERISK, KC_KP_ENTER,
+    ____, KC_CIRC, KC_EQUAL, KC_KP_ASTERISK, KC_LPRN, KC_RPRN, KC_BSPACE,
+    ____, KC_NUMLOCK, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_MINUS, KC_EQUAL,
+    KC_SCROLLLOCK, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS, KC_KP_ENTER,
     ____, KC_PSCREEN, KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_SLASH, ____,
-     KC_KP_0, KC_PERC, KC_KP_DOT, ____, ____,
+     KC_KP_0, KC_PERC, KC_KP_DOT, ____, KC_CALCULATOR,
     
     // right thumb
     ____, ____,
@@ -311,7 +274,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ____, ____, ____
 ),
 
-[9] = LAYOUT_ergodox(
+[8] = LAYOUT_ergodox(
     // left hand
     KC_HOME, KC_MS_BTN4, KC_MS_BTN3, KC_MS_BTN5, KC_MS_WH_UP, KC_MS_ACCEL0, ____,
     KC_END, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, KC_MS_WH_DOWN, KC_MS_ACCEL1, KC_PGUP,
@@ -322,13 +285,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // left thumb
     	____, ____,
     		LT(10,KC_NO),
-    	____, ____, ____,
+    	LT(9,KC_NO), ____, ____,
     
     // right hand
     ____, ____, KC_PSCREEN, KC_SCROLLLOCK, KC_PAUSE, KC_MS_WH_LEFT, KC_MS_WH_RIGHT,
     ____, KC_INSERT, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_MS_WH_UP,
     KC_DELETE, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDOWN, KC_MS_WH_DOWN,
     ____, KC_MS_BTN4, KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2, KC_MS_BTN5, ____,
+     ____, ____, ____, ____, ____,
+    
+    // right thumb
+    ____, ____,
+    ____,
+    ____, LT(9,KC_NO), ____
+),
+
+[9] = LAYOUT_ergodox(
+    // left hand
+    ____, ____, ____, ____, ____, ____, ____,
+    ____, ____, ____, ____, ____, ____, ____,
+    ____, ____, ____, ____, ____, ____,
+    ____, KC_MS_BTN4, KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2, KC_MS_BTN5, ____,
+     ____, ____, ____, ____, ____,
+        
+    // left thumb
+    	____, ____,
+    		____,
+    	____, ____, ____,
+    
+    // right hand
+    ____, ____, ____, ____, ____, KC_MS_ACCEL0, ____,
+    ____, KC_MS_WH_UP, KC_MS_BTN4, KC_MS_BTN3, KC_MS_BTN5, KC_MS_ACCEL1, ____,
+    KC_MS_WH_DOWN, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, KC_MS_ACCEL2, ____,
+    ____, KC_MS_WH_LEFT, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_RIGHT, ____,
      ____, ____, ____, ____, ____,
     
     // right thumb
@@ -354,7 +343,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ____, HSV_240_255_255, HSV_120_255_128, HSV_38_255_255, HSV_300_255_128, HSV_0_255_255, KC_SYSTEM_POWER,
     ____, RGB_HUD, RGB_VAD, RGB_TOG, RGB_VAI, RGB_HUI, KC_SYSTEM_SLEEP,
     ____, RGB_SLD, ____, RGB_MOD, ____, KC_SYSTEM_WAKE,
-    SH_OFF, RESET, ____, KC_PAUSE, KC_POWER, ____, ____,
+    ____, RESET, ____, ____, ____, KC_POWER, ____,
      ____, ____, ____, ____, ____,
     
     // right thumb
@@ -365,7 +354,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
     
-    
+
 const uint16_t PROGMEM fn_actions[] = {
     //[1] = ACTION_LAYER_TAP_TOGGLE(SYMB)                // FN1 - Momentary Layer 1 (Symbols)
 };
@@ -473,9 +462,32 @@ void matrix_init_user(void) {
   ergodox_led_all_set(5); 
 };
 
+// leader key
+LEADER_EXTERNS();
+
 // Runs constantly in the background, in a loop.
 void matrix_scan_user(void) {
+  LEADER_DICTIONARY() {
+    leading = false;
+    leader_end();
 
+    // SEQ_ONE_KEY SEQ_TWO_KEYS SEQ_THREE_KEYS SEQ_FOUR_KEYS SEQ_FIVE_KEYS
+    SEQ_TWO_KEYS(KC_C, KC_D) {
+      SEND_STRING("cd ~/");
+    }
+    SEQ_THREE_KEYS(KC_A,KC_W,KC_K) {
+      SEND_STRING("awk '{print $1}'"SS_TAP(X_LEFT)SS_TAP(X_LEFT));
+    }
+    //SEQ_THREE_KEYS(KC_X,KC_O,KC_N) {
+    //  // Anything you can do in a macro.
+      //SEND_STRING(SS_LCTRL("a")SS_LCTRL("c"));
+      //SEND_STRING("https://start.duckduckgo.com"SS_TAP(X_ENTER));
+      //register_code(KC_LGUI);
+      //register_code(KC_S);
+      //unregister_code(KC_S);
+      //unregister_code(KC_LGUI);
+    //}
+  }
 };
 
 // Runs whenever there is a layer state change.

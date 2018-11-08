@@ -18,6 +18,10 @@
 #define PERMISSIVE_HOLD
 #endif
 
+#ifndef LEADER_TIMEOUT
+#define LEADER_TIMEOUT 400
+#endif
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
