@@ -9,7 +9,7 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 ## Changelog
 
 * 2018-11-07
-  * [ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/XlaM)
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/XlaM)
   * After more than a year of using this, I decided to re-design the whole thing.
   * Re-organized function keys, media keys, keypads, and the base layer.
   * Dedicate a layer that contains all TO(n)
@@ -35,6 +35,4 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 * 2017-07-07
   * Draft
-  * ![Layer 0-2](https://i.imgur.com/co6QRi3)
-  * ![Layer 3-7](https://i.imgur.com/dZ3P2kc)
-  * ![visualized](https://configure.ergodox-ez.com/layouts/XlOo)
+  * Layout chart: [Layer 0-2](https://i.imgur.com/co6QRi3), [Layer 3-7](https://i.imgur.com/dZ3P2kc), [Setup at Ergodox-Ez Configurator](https://configure.ergodox-ez.com/layouts/XlOo)
