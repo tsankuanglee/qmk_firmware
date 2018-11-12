@@ -8,6 +8,10 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 ## Changelog
 
+* 2018-11-11-b
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/LzVA/)
+  * Move backtick, grave, and brackets, to more intuitive places
+
 * 2018-11-08-b
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/oBGr)
   * Make mouse layer movement same position as arrow movement. (The mouse layer is activated via the movement layer.)
