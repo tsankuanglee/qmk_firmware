@@ -19,7 +19,7 @@ enum custom_keycodes {
   HSV_0_255_255
 };
 
-// https://configure.ergodox-ez.com/layouts/LzVA/
+// https://configure.ergodox-ez.com/layouts/MeOr
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
@@ -70,28 +70,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [1] = LAYOUT_ergodox(
     // left hand
-    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,
-     _______, _______, _______, _______, _______,
+    KC_GRAVE, KC_1, KC_2, KC_3, KC_4, KC_5, KC_L,
+    KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y,
+    KC_M, KC_A, KC_S, KC_D, KC_F, KC_G,
+    KC_LSHIFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_H,
+     KC_LCTRL, KC_LBRACKET, KC_RBRACKET, KC_MINUS, KC_LALT,
 
     // left thumb
-    	_______, _______,
+    	LT(6,KC_NO), KC_ESCAPE,
     		LT(10,KC_NO),
-    	_______, _______, _______,
+    	KC_SPACE, KC_EQUAL, KC_J,
 
     // right hand
-    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,
-     _______, _______, _______, _______, _______,
+    _______, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPACE,
+    _______, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLASH,
+    KC_H, KC_J, KC_K, KC_L, KC_SCOLON, KC_QUOTE,
+    _______, KC_N, KC_M, KC_COMMA, KC_DOT, KC_SLASH, KC_RSHIFT,
+     KC_RALT, KC_RGUI, KC_RCTRL, _______, _______,
 
     // right thumb
-    _______, _______,
+    TO(0), _______,
     _______,
-    _______, _______, _______
+    _______, _______, KC_ENTER
 ),
 
 [2] = LAYOUT_ergodox(
@@ -435,7 +435,7 @@ void matrix_init_user(void) {
 #ifdef RGBLIGHT_COLOR_LAYER_0
   rgblight_setrgb(RGBLIGHT_COLOR_LAYER_0);
 #endif
-  ergodox_led_all_set(5); 
+  ergodox_led_all_set(5);
 };
 
 // leader key

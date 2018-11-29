@@ -8,6 +8,10 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 ## Changelog
 
+* 2018-11-28-a
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/MeOr)
+  * add a layer for one specific app (personal; other people probably won't find it useful)
+
 * 2018-11-11-b
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/LzVA/)
   * Move backtick, grave, and brackets, to more intuitive places
