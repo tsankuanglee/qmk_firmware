@@ -8,6 +8,10 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 ## Changelog
 
+* 2018-12-08-a
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/MeOr)
+  * add NKRO ON/OFF in layer 10
+
 * 2018-11-28-a
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/MeOr)
   * add a layer for one specific app (personal; other people probably won't find it useful)

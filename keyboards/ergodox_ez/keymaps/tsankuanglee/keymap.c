@@ -319,7 +319,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, HSV_240_255_255, HSV_120_255_128, HSV_38_255_255, HSV_300_255_128, HSV_0_255_255, KC_SYSTEM_POWER,
     _______, RGB_HUD, RGB_VAD, RGB_TOG, RGB_VAI, RGB_HUI, KC_SYSTEM_SLEEP,
     _______, RGB_SLD, _______, RGB_MOD, _______, KC_SYSTEM_WAKE,
-    _______, RESET, _______, _______, _______, KC_POWER, _______,
+    _______, RESET, _______, MAGIC_UNHOST_NKRO, MAGIC_HOST_NKRO, KC_POWER, _______,
      _______, _______, _______, _______, _______,
 
     // right thumb
