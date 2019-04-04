@@ -19,7 +19,7 @@ enum custom_keycodes {
   HSV_0_255_255
 };
 
-// https://configure.ergodox-ez.com/layouts/MeOr
+// https://configure.ergodox-ez.com/layouts/vewr/latest/0
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
@@ -82,10 +82,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     	KC_SPACE, KC_EQUAL, KC_J,
 
     // right hand
-    _______, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPACE,
-    _______, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLASH,
+    KC_F5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPACE,
+    KC_F1, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLASH,
     KC_H, KC_J, KC_K, KC_L, KC_SCOLON, KC_QUOTE,
-    _______, KC_N, KC_M, KC_COMMA, KC_DOT, KC_SLASH, KC_RSHIFT,
+    KC_F2, KC_N, KC_M, KC_COMMA, KC_DOT, KC_SLASH, KC_RSHIFT,
      KC_RALT, KC_RGUI, KC_RCTRL, _______, _______,
 
     // right thumb
@@ -156,7 +156,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // left thumb
     	_______, _______,
-    		_______,
+    		LT(10,KC_NO),
     	_______, _______, _______,
 
     // right hand
@@ -182,7 +182,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // left thumb
     	_______, _______,
-    		_______,
+    		LT(10,KC_NO),
     	_______, _______, _______,
 
     // right hand
@@ -208,13 +208,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // left thumb
     	_______, _______,
-    		LT(10,KC_NO),
+    		_______,
     	_______, _______, _______,
 
     // right hand
     _______, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
-    _______, _______, KC_MINUS, KC_EQUAL, KC_LBRACKET, KC_RBRACKET, KC_F12,
-    _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_NONUS_HASH,
+    _______, KC_CIRC, KC_MINUS, KC_EQUAL, KC_LBRACKET, KC_RBRACKET, KC_F12,
+    KC_AMPR, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_NONUS_HASH,
     _______, KC_F21, KC_F22, KC_F23, KC_F24, KC_NONUS_BSLASH, _______,
      _______, _______, _______, _______, _______,
 
@@ -247,7 +247,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // right thumb
     _______, _______,
     _______,
-    _______, _______, _______
+    _______, _______, LT(9,KC_NO)
 ),
 
 [8] = LAYOUT_ergodox(
@@ -311,15 +311,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, _______, _______, _______, _______,
 
     // left thumb
-    	_______, _______,
+    	_______, TO(0),
     		_______,
     	_______, _______, _______,
 
     // right hand
-    _______, HSV_240_255_255, HSV_120_255_128, HSV_38_255_255, HSV_300_255_128, HSV_0_255_255, KC_SYSTEM_POWER,
+    KC_POWER, HSV_240_255_255, HSV_120_255_128, HSV_38_255_255, HSV_300_255_128, HSV_0_255_255, KC_SYSTEM_POWER,
     _______, RGB_HUD, RGB_VAD, RGB_TOG, RGB_VAI, RGB_HUI, KC_SYSTEM_SLEEP,
     _______, RGB_SLD, _______, RGB_MOD, _______, KC_SYSTEM_WAKE,
-    _______, RESET, _______, MAGIC_UNHOST_NKRO, MAGIC_HOST_NKRO, KC_POWER, _______,
+    _______, RESET, _______, MAGIC_UNHOST_NKRO, MAGIC_HOST_NKRO, _______, _______,
      _______, _______, _______, _______, _______,
 
     // right thumb
