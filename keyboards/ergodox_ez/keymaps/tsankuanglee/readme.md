@@ -8,6 +8,11 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 ## Changelog
 
+* 2019-04-04-a
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/vewr)
+  * move power button away from layer switch, to prevent misfiring
+  * add a few layer switches for comfort
+
 * 2018-12-08-a
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/MeOr)
   * add NKRO ON/OFF in layer 10
