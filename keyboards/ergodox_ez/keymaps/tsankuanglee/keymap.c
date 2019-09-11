@@ -451,6 +451,16 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_C, KC_D) {
       SEND_STRING("cd ~/");
     }
+    SEQ_TWO_KEYS(KC_H,KC_P) {
+      SEND_STRING("http://");
+    }
+    SEQ_TWO_KEYS(KC_H,KC_S) {
+      SEND_STRING("https://");
+    }
+    // skip Chromium data collection page when launch
+    SEQ_TWO_KEYS(KC_C,KC_R) {
+        SEND_STRING(SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_SPACE));
+    }
     SEQ_THREE_KEYS(KC_A,KC_W,KC_K) {
       SEND_STRING("awk '{print $1}'"SS_TAP(X_LEFT)SS_TAP(X_LEFT));
     }
