@@ -307,6 +307,9 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_H,KC_S) {
       SEND_STRING("https://");
     }
+    SEQ_TWO_KEYS(KC_L,KC_H) {
+      SEND_STRING("http://localhost:");
+    }
     // skip Chromium data collection page when launch
     SEQ_TWO_KEYS(KC_C,KC_R) {
         SEND_STRING(SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_SPACE));
