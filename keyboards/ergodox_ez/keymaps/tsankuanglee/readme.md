@@ -2,11 +2,17 @@
 
 This is my personal keymap. I am right handed, and use my mouse with my right hand. Many layers are designed for me to keep my right hand on the mouse while the left hand has access to most keys. Sometimes I also keep my right hand on the keyboard and use my left hand to touch the screen.
 
-About Ergodox-ez's Configurator: I use it to produce the base key layouts and download its keymap.c file to build upon. In the Changelogbelow, I include the URL to the visualized layouts; note that the configuration only supports a subset of QMK functions, so the visualization only shows a rough setup.
+About Ergodox-ez's Configurator: I use it to produce the base key layouts and download its keymap.c file to build upon. `keymap.c` is further edited to add functions not supported by the configurator. In the Changelogbelow, I include the URL to the visualized layouts; note that the configuration only supports a subset of QMK functions, so the visualization only shows a rough setup.
 
 ## TODO
 
 ## Changelog
+
+* 2019-09-27-a
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/ergodox-ez/layouts/v6gxO)
+  * fix ALL mod (HYPER) key to get rid of delay
+  * add some leader macros
+  * minor edits to layer 1 (for a specific app)
 
 * 2019-04-04-a
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/layouts/vewr)
