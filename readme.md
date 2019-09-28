@@ -1,8 +1,11 @@
-This is my fork from the [upstream](https://github.com/qmk/qmk_firmware).
+This is my fork from the [upstream](https://github.com/qmk/qmk_firmware). It has my contributions to the master as well as my own keymaps.
 
-I [contributed](https://github.com/qmk/qmk_firmware/pull/1922) the `RETRO_TAPPING` function (it's now included int the upstream.)
+Contributions:
+* [RETRO_TAPPING](https://github.com/qmk/qmk_firmware/pull/1922) (merged)
+* [Layout Source Code Prettifier](https://github.com/qmk/qmk_firmware/pull/4393) (pending merge)
 
-I use ErgoDox-Ez. Here's [my personal keymap](https://github.com/tsankuanglee/qmk_firmware/tree/tsankuanglee_ergodox_ez/keyboards/ergodox_ez/keymaps/tsankuanglee), in the branch [tsankuanglee_ergodox_ez](https://github.com/tsankuanglee/qmk_firmware/tree/tsankuanglee_ergodox_ez).
+My own keymaps:
+* [ErgoDox-Ez](https://github.com/tsankuanglee/qmk_firmware/tree/tsankuanglee_ergodox_ez/keyboards/ergodox_ez/keymaps/tsankuanglee)
 
 The following is the original readme.md
 
