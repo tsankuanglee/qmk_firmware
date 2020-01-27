@@ -120,8 +120,8 @@ _______, _______, _______, _______, _______,                                    
 
 [6] = LAYOUT_ergodox_pretty(
 KC_GRAVE,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5, _______,      _______, KC_F6  , KC_F7   , KC_F8   , KC_F9      , KC_F10         , KC_F11       ,
- KC_TILD,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10, _______,      _______, KC_CIRC, KC_MINUS, KC_EQUAL, KC_LBRACKET, KC_RBRACKET    , KC_F12       ,
- _______,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,                        KC_AMPR, KC_UNDS , KC_PLUS , KC_LCBR    , KC_RCBR        , KC_NONUS_HASH,
+ KC_TILD,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10, _______,      _______, KC_CIRC, KC_UNDS , KC_PLUS , KC_LCBR    , KC_RCBR        , KC_F12       ,
+ _______,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,                        KC_AMPR, KC_MINUS, KC_EQUAL, KC_LBRACKET, KC_RBRACKET    , KC_NONUS_HASH,
  _______,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20, _______,      _______, KC_F21 , KC_F22  , KC_F23  , KC_F24     , KC_NONUS_BSLASH, _______      ,
  _______, _______, _______, _______, _______,                                          _______ , _______ , _______    , _______        , _______      ,
 
@@ -131,11 +131,11 @@ KC_GRAVE,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5, _______,      _______, KC
 ),
 
 [7] = LAYOUT_ergodox_pretty(
-    _______,       KC_CALCULATOR,   KC_WWW_SEARCH,             KC_MAIL,            KC_PSCREEN,      KC_MY_COMPUTER,      _______,      _______, KC_CIRC      , KC_EQUAL   , KC_KP_ASTERISK, KC_LPRN  , KC_RPRN    , KC_BSPACE    ,
-     KC_F20,       KC_AUDIO_MUTE,     KC_WWW_HOME,      KC_MEDIA_EJECT,        KC_WWW_REFRESH,     KC_AUDIO_VOL_UP,      _______,      _______, KC_NUMLOCK   , KC_KP_7    , KC_KP_8       , KC_KP_9  , KC_KP_MINUS, KC_EQUAL     ,
-KC_CAPSLOCK,    KC_WWW_FAVORITES,     KC_WWW_BACK,       KC_MEDIA_STOP,        KC_WWW_FORWARD,   KC_AUDIO_VOL_DOWN,                             KC_SCROLLLOCK, KC_KP_4    , KC_KP_5       , KC_KP_6  , KC_KP_PLUS , KC_KP_ENTER  ,
-    _______, KC_MEDIA_PREV_TRACK, KC_MEDIA_REWIND, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_FAST_FORWARD, KC_MEDIA_NEXT_TRACK,      _______,      _______, KC_PSCREEN   , KC_KP_1    , KC_KP_2       , KC_KP_3  , KC_KP_SLASH, _______      ,
-    _______,             _______,         _______,             _______,               _______,                                                                 KC_KP_0    , KC_PERC       , KC_KP_DOT, _______    , KC_CALCULATOR,
+    _______,       KC_CALCULATOR,   KC_WWW_SEARCH,             KC_MAIL,            KC_PSCREEN,      KC_MY_COMPUTER,      _______,      _______, KC_CIRC      , KC_NUMLOCK , KC_KP_SLASH, KC_KP_ASTERISK, KC_KP_MINUS, KC_BSPACE  ,
+     KC_F20,       KC_AUDIO_MUTE,     KC_WWW_HOME,      KC_MEDIA_EJECT,        KC_WWW_REFRESH,     KC_AUDIO_VOL_UP,      _______,      _______, KC_CALCULATOR, KC_KP_7    , KC_KP_8    , KC_KP_9       , KC_EQUAL   , KC_DELETE  ,
+KC_CAPSLOCK,    KC_WWW_FAVORITES,     KC_WWW_BACK,       KC_MEDIA_STOP,        KC_WWW_FORWARD,   KC_AUDIO_VOL_DOWN,                             KC_SCROLLLOCK, KC_KP_4    , KC_KP_5    , KC_KP_6       , KC_KP_PLUS , KC_KP_ENTER,
+    _______, KC_MEDIA_PREV_TRACK, KC_MEDIA_REWIND, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_FAST_FORWARD, KC_MEDIA_NEXT_TRACK,      _______,      _______, KC_PSCREEN   , KC_KP_1    , KC_KP_2    , KC_KP_3       , KC_UNDS    , _______    ,
+    _______,             _______,         _______,             _______,               _______,                                                                 KC_KP_0    , KC_PERC    , KC_KP_DOT     , KC_LPRN    , KC_RPRN    ,
 
                                                                                                            _______,      _______,      _______, _______      ,
                                                                                                                     LT(10,KC_NO),      _______,

@@ -8,6 +8,12 @@ About Ergodox-ez's Configurator: I use it to produce the base key layouts and do
 
 ## Changelog
 
+* 2020-01-27-a
+  * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/ergodox-ez/layouts/jOaZd)
+  * re-organize numpad layer to be closer to the common one.
+  * shifted symbols are moved to the upper row
+  * added some leader macros
+
 * 2019-09-27-a
   * [My setup with ErgoDox-Ez Configurator](https://configure.ergodox-ez.com/ergodox-ez/layouts/v6gxO)
   * fix ALL mod (HYPER) key to get rid of delay
