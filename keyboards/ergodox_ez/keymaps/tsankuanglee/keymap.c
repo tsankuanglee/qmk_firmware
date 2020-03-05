@@ -320,6 +320,9 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_C,KC_R) {
         SEND_STRING(SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_SPACE));
     }
+    SEQ_TWO_KEYS(KC_C,KC_F) {
+      SEND_STRING("chrome://settings/?search=location" SS_TAP(X_ENTER));
+    }
     // gmail
     SEQ_TWO_KEYS(KC_C,KC_G) {
         SEND_STRING("https://mail.google.com" SS_TAP(X_ENTER));
