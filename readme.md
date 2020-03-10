@@ -7,6 +7,13 @@ Contributions:
 My own keymaps:
 * [ErgoDox-Ez](https://github.com/tsankuanglee/qmk_firmware/tree/tsankuanglee_ergodox_ez/keyboards/ergodox_ez/keymaps/tsankuanglee)
 
+
+Env Setup notes:
+```
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
 The following is the original readme.md
 
 # Quantum Mechanical Keyboard Firmware

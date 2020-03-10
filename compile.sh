@@ -19,15 +19,15 @@ export HEXNAME=${KEYBOARD}_${KEYMAP}.hex
 docker-compose run --rm\
     compiler \
     bash -c "qmk compile -kb ${KEYBOARD} -km ${KEYMAP}; qmk flash -kb ${KEYBOARD} -km  ${KEYMAP}"
-#
-## clean up; no need to keep it in the root
-#rm -f ./${HEXNAME}
-#
-## flashing
-#../teensy_loader_cli.git/teensy_loader_cli -mmcu=atmega32u4 -w -v .build/${HEXNAME}
-#
-## copy the files to archived
-#export TIMESTAMP=`date +%Y%m%d-%H%M%S`
-#export KEYMAP_FOLDER=./keyboards/${KEYBOARD}/keymaps/${KEYMAP}
-#rsync -at ${KEYMAP_FOLDER}/keymap.c ${KEYMAP_FOLDER}/archived/${TIMESTAMP}-keymap.c
-#rsync -at .build/${HEXNAME} ${KEYMAP_FOLDER}/archived/${TIMESTAMP}-${HEXNAME}
+
+# clean up; no need to keep it in the root
+rm -f ./${HEXNAME}
+
+# flashing
+../teensy_loader_cli.git/teensy_loader_cli -mmcu=atmega32u4 -w -v .build/${HEXNAME}
+
+# copy the files to archived
+export TIMESTAMP=`date +%Y%m%d-%H%M%S`
+export KEYMAP_FOLDER=./keyboards/${KEYBOARD}/keymaps/${KEYMAP}
+rsync -at ${KEYMAP_FOLDER}/keymap.c ${KEYMAP_FOLDER}/archived/${TIMESTAMP}-keymap.c
+rsync -at .build/${HEXNAME} ${KEYMAP_FOLDER}/archived/${TIMESTAMP}-${HEXNAME}
