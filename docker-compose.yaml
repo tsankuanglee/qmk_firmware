@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  compiler:
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    #image: tsankuanglee/qmk_compiler
+    image: qmkfm/base_container
+    user: "1000:1000"
+    volumes:
+      - type: bind
+        source: ${PWD}
+        target: /qmk_firmware
+        volume:
+          nocopy: true
+    #env_file:
+    #  - .env
+
+    working_dir: /qmk_firmware
+
+    command: qmk compile -kb ergodox_ez -km tsankuanglee
+
+
+volumes:
+    docker_mount:
+
+networks:
+  default:
