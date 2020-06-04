@@ -1,6 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "debug.h"
-#include "action_layer.h"
 #include "version.h"
 
 
@@ -8,10 +6,13 @@
 #define ____ KC_TRNS
 
 enum custom_keycodes {
-  PLACEHOLDER = SAFE_RANGE, // can always be here
-  EPRM,
-  VRSN,
+#ifdef ORYX_CONFIGURATOR
+  VRSN = EZ_SAFE_RANGE,
+#else
+  VRSN = SAFE_RANGE,
+#endif
   RGB_SLD,
+  EPRM,
   HSV_240_255_255,
   HSV_120_255_128,
   HSV_38_255_255,
@@ -179,109 +180,52 @@ _______, _______, _______, _______, _______,                                    
 )
 };
 
-
-
-const uint16_t PROGMEM fn_actions[] = {
-    //[1] = ACTION_LAYER_TAP_TOGGLE(SYMB)                // FN1 - Momentary Layer 1 (Symbols)
-};
-
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
-{
-  // MACRODOWN only works in this function
-  switch(id) {
-    case 0:
-      if (record->event.pressed) {
-        //SEND_STRING (QMK_KEYBOARD "/" QMK_LAYOUT_ergodox " @ " QMK_VERSION);
-      }
-      break;
-    case 1:
-      if (record->event.pressed) { // For resetting EEPROM
-        eeconfig_init();
-      }
-      break;
-  }
-  return MACRO_NONE;
-};
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    // dynamically generate these.
-    case EPRM:
-      if (record->event.pressed) {
+  if (record->event.pressed) {
+    switch (keycode) {
+      case VRSN:
+        SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+        return false;
+      case EPRM:
         eeconfig_init();
-      }
-      return false;
-      break;
-    case VRSN:
-      if (record->event.pressed) {
-        //SEND_STRING (QMK_KEYBOARD "/" QMK_LAYOUT_ergodox " @ " QMK_VERSION);
-      }
-      return false;
-      break;
-    case RGB_SLD:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_mode(1);
-        #endif
-      }
-      return false;
-      break;
-    case HSV_240_255_255:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(240,255,255);
-        #endif
-      }
-      return false;
-      break;
-    case HSV_120_255_128:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(120,255,128);
-        #endif
-      }
-      return false;
-      break;
-    case HSV_38_255_255:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(38,255,255);
-        #endif
-      }
-      return false;
-      break;
-    case HSV_300_255_128:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_setrgb(138,43,226);
-        #endif
-      }
-      return false;
-      break;
-    case HSV_0_255_255:
-      if (record->event.pressed) {
-        #ifdef RGBLIGHT_ENABLE
-          rgblight_enable();
-          rgblight_mode(1);
-          rgblight_sethsv(0,255,255);
-        #endif
-      }
-      return false;
-      break;
+        return false;
+      #ifdef RGBLIGHT_ENABLE
+      case RGB_SLD:
+        rgblight_mode(1);
+        return false;
+      case HSV_240_255_255:
+        rgblight_enable();
+        rgblight_mode(1);
+        rgblight_sethsv(240,255,255);
+        return false;
+      case HSV_120_255_128:
+        rgblight_enable();
+        rgblight_mode(1);
+        rgblight_sethsv(120,255,128);
+        return false;
+      case HSV_38_255_255:
+        rgblight_enable();
+        rgblight_mode(1);
+        rgblight_sethsv(38,255,255);
+        return false;
+      case HSV_300_255_128:
+        rgblight_enable();
+        rgblight_mode(1);
+        rgblight_setrgb(138,43,226);
+        return false;
+      case HSV_0_255_255:
+        rgblight_enable();
+        rgblight_mode(1);
+        rgblight_sethsv(0,255,255);
+        return false;
+      #endif
+    }
   }
   return true;
 }
 
 // Runs just one time when the keyboard initializes.
-void matrix_init_user(void) {
+void keyboard_post_init_user(void) {
 #ifdef RGBLIGHT_COLOR_LAYER_0
   rgblight_setrgb(RGBLIGHT_COLOR_LAYER_0);
 #endif
@@ -362,13 +306,13 @@ void matrix_scan_user(void) {
 };
 
 // Runs whenever there is a layer state change.
-uint32_t layer_state_set_user(uint32_t state) {
+layer_state_t layer_state_set_user(layer_state_t state) {
   ergodox_board_led_off();
   ergodox_right_led_1_off();
   ergodox_right_led_2_off();
   ergodox_right_led_3_off();
 
-  uint8_t layer = biton32(state);
+  uint8_t layer = get_highest_layer(state);
   switch (layer) {
       case 0:
         #ifdef RGBLIGHT_COLOR_LAYER_0

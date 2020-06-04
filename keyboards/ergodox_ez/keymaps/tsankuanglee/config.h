@@ -10,6 +10,9 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 100
 
+#undef DEBOUNCE
+#define DEBOUNCE 50
+
 #ifndef RETRO_TAPPING
 #define RETRO_TAPPING // Tap anyway, even after timeout, as long as there was no interruption
 #endif
@@ -17,6 +20,7 @@
 #ifndef PERMISSIVE_HOLD
 #define PERMISSIVE_HOLD
 #endif
+
 
 #ifndef LEADER_TIMEOUT
 #define LEADER_TIMEOUT 400
@@ -41,7 +45,7 @@
 /* disable action features */
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
-#define NO_ACTION_ONESHOT
+//#define NO_ACTION_ONESHOT
 #define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 //#define DEBUG_MATRIX_SCAN_RATE
