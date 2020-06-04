@@ -13,6 +13,9 @@
 #undef DEBOUNCE
 #define DEBOUNCE 50
 
+#undef DEBOUNCE
+#define MOUSEKEY_WHEEL_INTERVAL 20
+
 #ifndef RETRO_TAPPING
 #define RETRO_TAPPING // Tap anyway, even after timeout, as long as there was no interruption
 #endif
