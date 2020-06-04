@@ -25,6 +25,8 @@ services:
     working_dir: /qmk_firmware
 
     command: qmk compile -kb ergodox_ez -km tsankuanglee
+    # TODO enable this after we mount the keyboard flashing device into container
+    #command: bash -c "qmk compile -kb ergodox_ez -km tsankuanglee; qmk flash -kb ergodox_ez -km tsankuanglee"
 
 
 volumes:
