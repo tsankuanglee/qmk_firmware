@@ -14,6 +14,11 @@ services:
         target: /qmk_firmware
         volume:
           nocopy: true
+      - type: bind
+        source: ${PWD}/../teensy_loader_cli.git/teensy_loader_cli
+        target: /usr/bin/teensy_loader_cli
+        volume:
+          nocopy: true
     #env_file:
     #  - .env
 
