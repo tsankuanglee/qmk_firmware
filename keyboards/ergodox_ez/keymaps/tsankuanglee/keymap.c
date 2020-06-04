@@ -306,6 +306,19 @@ void matrix_scan_user(void) {
     SEQ_THREE_KEYS(KC_S,KC_C,KC_D) {
       SEND_STRING("#!/usr/bin/bash" SS_TAP(X_ENTER) "cd \"$(dirname \"$(realpath \"$0\")\")\";" SS_TAP(X_ENTER));
     }
+    // awk filter out a column
+    SEQ_THREE_KEYS(KC_A,KC_W,KC_K) {
+      SEND_STRING("awk '{print $1}'"SS_TAP(X_LEFT)SS_TAP(X_LEFT));
+    }
+    // bash no history saving
+    SEQ_TWO_KEYS(KC_N,KC_H) {
+      SEND_STRING("export HISTFILE="SS_TAP(X_ENTER));
+    }
+    // tmux
+    SEQ_TWO_KEYS(KC_T,KC_M) {
+      SEND_STRING("tmux att -d"SS_TAP(X_ENTER));
+    }
+
     // browser address
     SEQ_TWO_KEYS(KC_H,KC_P) {
       SEND_STRING("http://");
@@ -320,24 +333,21 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_C,KC_R) {
         SEND_STRING(SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_SPACE) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_SPACE));
     }
+    // chrome setup
     SEQ_TWO_KEYS(KC_C,KC_F) {
-      SEND_STRING("chrome://settings/?search=location" SS_TAP(X_ENTER));
+      SEND_STRING("chrome://settings/?search=downloading" SS_TAP(X_ENTER));
+    }
+    // chrome setup: MIDI
+    SEQ_TWO_KEYS(KC_C,KC_M) {
+      SEND_STRING("chrome://flags/#unsafely-treat-insecure-origin-as-secure" SS_TAP(X_ENTER));
     }
     // gmail
     SEQ_TWO_KEYS(KC_C,KC_G) {
         SEND_STRING("https://mail.google.com" SS_TAP(X_ENTER));
     }
-    // awk filter out a column
-    SEQ_THREE_KEYS(KC_A,KC_W,KC_K) {
-      SEND_STRING("awk '{print $1}'"SS_TAP(X_LEFT)SS_TAP(X_LEFT));
-    }
-    // bash no history saving
-    SEQ_TWO_KEYS(KC_N,KC_H) {
-      SEND_STRING("export HISTFILE="SS_TAP(X_ENTER));
-    }
-    // tmux
-    SEQ_TWO_KEYS(KC_T,KC_M) {
-      SEND_STRING("tmux att -d"SS_TAP(X_ENTER));
+    // Android messages
+    SEQ_TWO_KEYS(KC_C,KC_A) {
+        SEND_STRING("https://messages.android.com" SS_TAP(X_ENTER));
     }
     //SEQ_THREE_KEYS(KC_X,KC_O,KC_N) {
     //  // Anything you can do in a macro.

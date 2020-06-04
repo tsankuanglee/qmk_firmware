@@ -18,7 +18,8 @@ export HEXNAME=${KEYBOARD}_${KEYMAP}.hex
 # new version
 docker-compose run --rm\
     compiler \
-    bash -c "qmk compile -kb ${KEYBOARD} -km ${KEYMAP}; qmk flash -kb ${KEYBOARD} -km  ${KEYMAP}"
+    bash -c "qmk compile -kb ${KEYBOARD} -km ${KEYMAP}"
+    #bash -c "qmk compile -kb ${KEYBOARD} -km ${KEYMAP}; qmk flash -kb ${KEYBOARD} -km  ${KEYMAP}"
 
 # clean up; no need to keep it in the root
 rm -f ./${HEXNAME}
