@@ -33,6 +33,7 @@ API_SYSEX_ENABLE = no
 RGBLIGHT_ENABLE = yes
 
 RGB_MATRIX_ENABLE = no # enable later
+RGB_MATRIX_DRIVER = IS31FL3731
 DEBOUNCE_TYPE = eager_pr
 
 # project specific files
@@ -49,3 +50,4 @@ UCIS_ENABLE = no
 AUTOLOG_ENABLE = no
 RGBLIGHT_ANIMATION = no
 LEADER_ENABLE = yes
+COMBO_ENABLE = yes

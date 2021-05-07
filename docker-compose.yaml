@@ -6,7 +6,7 @@ services:
     #  context: .
     #  dockerfile: Dockerfile
     #image: tsankuanglee/qmk_compiler
-    image: qmkfm/base_container
+    image: qmkfm/base_container:20210507
     user: "1000:1000"
     volumes:
       - type: bind

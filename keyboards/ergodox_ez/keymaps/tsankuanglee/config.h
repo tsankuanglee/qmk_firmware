@@ -7,6 +7,8 @@
 #define QMK_KEYS_PER_SCAN 4
 #endif // !QMK_KEYS_PER_SCAN
 
+//#define COMBO_COUNT 5
+
 #undef TAPPING_TERM
 #define TAPPING_TERM 100
 
