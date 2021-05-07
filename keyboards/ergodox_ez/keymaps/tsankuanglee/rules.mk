@@ -1,3 +1,5 @@
+# this is acutally intended for overrides only but for convenience and completeness, I copied the default and use diff to manage my changes
+
 # MCU name
 MCU = atmega32u4
 
@@ -24,14 +26,23 @@ MOUSEKEY_ENABLE  = yes # Mouse keys
 EXTRAKEY_ENABLE  = yes # Audio control and System control
 CONSOLE_ENABLE   = no  # Console for debug
 COMMAND_ENABLE   = no  # Commands for debug and configuration
-CUSTOM_MATRIX    = yes # Custom matrix file for the ErgoDox EZ
+CUSTOM_MATRIX    = no # Custom matrix file for the ErgoDox EZ
 NKRO_ENABLE      = yes # USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 UNICODE_ENABLE   = yes # Unicode
 SWAP_HANDS_ENABLE= yes # Allow swapping hands of keyboard
 SLEEP_LED_ENABLE = no
 API_SYSEX_ENABLE = no
-RGBLIGHT_ENABLE = yes
 
+FORCE_NKRO = yes
+TAP_DANCE_ENABLE = no
+KEYLOGGER_ENABLE = no
+UCIS_ENABLE = no
+AUTOLOG_ENABLE = no
+RGBLIGHT_ANIMATION = no
+LEADER_ENABLE = yes
+COMBO_ENABLE = yes
+
+RGBLIGHT_ENABLE = yes
 RGB_MATRIX_ENABLE = no # enable later
 RGB_MATRIX_DRIVER = IS31FL3731
 DEBOUNCE_TYPE = eager_pr
@@ -43,11 +54,6 @@ QUANTUM_LIB_SRC += i2c_master.c
 
 LAYOUTS = ergodox
 
-FORCE_NKRO = yes
-TAP_DANCE_ENABLE = no
-KEYLOGGER_ENABLE = no
-UCIS_ENABLE = no
-AUTOLOG_ENABLE = no
-RGBLIGHT_ANIMATION = no
-LEADER_ENABLE = yes
-COMBO_ENABLE = yes
+# Disable unsupported hardware
+AUDIO_SUPPORTED = no
+BACKLIGHT_SUPPORTED = no
