@@ -2,7 +2,7 @@ This is my fork from the [upstream](https://github.com/qmk/qmk_firmware). It has
 
 Contributions:
 * [RETRO_TAPPING](https://github.com/qmk/qmk_firmware/pull/1922) (merged)
-* [Layout Source Code Prettifier](https://github.com/qmk/qmk_firmware/pull/4393) (pending merge)
+* [Layout Source Code Prettifier](https://github.com/qmk/qmk_firmware/pull/4393) (merged)
 
 My own keymaps:
 * [ErgoDox-Ez](https://github.com/tsankuanglee/qmk_firmware/tree/tsankuanglee_ergodox_ez/keyboards/ergodox_ez/keymaps/tsankuanglee)
